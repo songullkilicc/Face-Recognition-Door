@@ -3,7 +3,7 @@
 ## Project Description
 This project is a face recognition door system using Python, Arduino, and a mobile application. 
 The system recognizes authorized faces and opens a door or triggers a light when a known person is detected. 
-The mobile app can also control the door remotely with a single photo.
+The mobile app can also control the door remotely.
 
 ## Components
 - **Python Code:** Handles face recognition using OpenCV and communicates with Arduino via serial.
@@ -42,3 +42,4 @@ The mobile app can also control the door remotely with a single photo.
 - Selen Songül Kılıç
 - Yunus Kuşbey
 - Tunahan Yalçın
+
