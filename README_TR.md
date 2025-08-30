@@ -3,7 +3,7 @@
 ## Proje Açıklaması
 Bu proje, Python, Arduino ve mobil uygulama kullanılarak yapılan bir yüz tanıma kapı sistemidir. 
 Sistem, yetkili kişileri tanır ve tanınan kişileri kapıyı açarak veya ışığı yakarak karşılar. 
-Mobil uygulama üzerinden de kapı uzaktan kontrol edilebilir (tek fotoğraf ile).
+Mobil uygulama üzerinden de kapı uzaktan kontrol edilebilir.
 
 ## Bileşenler
 - **Python Kodu:** OpenCV ile yüz tanıma yapar ve Arduino ile seri iletişim kurar.
@@ -41,4 +41,5 @@ Mobil uygulama üzerinden de kapı uzaktan kontrol edilebilir (tek fotoğraf ile
 ## Yazar
 - Selen Songül Kılıç
 - Yunus Kuşbey
+
 - Tunahan Yalçın
