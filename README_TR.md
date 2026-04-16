@@ -1,45 +1,124 @@
-# Yüz Tanıma Kapı Sistemi
+# 🚀 Yüz Tanıma ile Kapı Kontrol Sistemi
 
-## Proje Açıklaması
-Bu proje, Python, Arduino ve mobil uygulama kullanılarak yapılan bir yüz tanıma kapı sistemidir. 
-Sistem, yetkili kişileri tanır ve tanınan kişileri kapıyı açarak veya ışığı yakarak karşılar. 
-Mobil uygulama üzerinden de kapı uzaktan kontrol edilebilir.
+## 📌 Proje Hakkında
 
-## Bileşenler
-- **Python Kodu:** OpenCV ile yüz tanıma yapar ve Arduino ile seri iletişim kurar.
-- **Arduino Kodu:** Kapı için servo motoru ve LED'i kontrol eder.
-- **Mobil Uygulama:** Uzaktan kapıyı kontrol etmeye olanak sağlar (fotoğraf tabanlı).
+Bu proje, bilgisayarla görme teknolojisi kullanarak yetkili kişileri tanıyan ve Arduino tabanlı bir sistem ile fiziksel erişimi kontrol eden akıllı bir kapı sistemidir.
 
-## Özellikler
-- Birden fazla yetkili kullanıcıyı tanıyabilir
-- Tanınan yüz için kapıyı otomatik açar
-- Tanınan yüz algılandığında LED yanar
-- Mobil uygulama üzerinden uzaktan kontrol
-- Daha iyi doğruluk için ayarlanabilir tanıma eşiği
+Sistem, **yüz tanıma (Python + OpenCV)** ile **gömülü sistemleri (Arduino, servo motor, LED)** birleştirerek gerçek hayattaki biyometrik güvenlik sistemlerini simüle eder.
 
-## Çalışma Prensibi
-1. Python kodu kameradan video alır.
-2. Algılanan yüzler eğitimli modellerle karşılaştırılır.
-3. Tanınan bir yüz bulunursa:
-   - Arduino servo motor ile kapıyı açar.
-   - LED yanar.
-   - Mobil uygulama ile işlem tetiklenebilir.
-4. Tanınmayan yüzlerde kapı kapalı kalır ve LED söner.
+---
 
-## Notlar
-- Mobil uygulama kodu dahil değildir; yalnızca Python ve Arduino kısımları mevcuttur.
-- Python ve Arduino kodları açıklamalarla belgelenmiştir.
+## 🧠 Temel Özellikler
 
-## Teknolojiler
-- Python 3
-- OpenCV
-- Arduino IDE
-- Servo motor
-- LED
-- Mobil uygulama arayüzü (fotoğraf tabanlı kontrol)
+* Yüz tanıma tabanlı kimlik doğrulama
+* Python ve Arduino arasında gerçek zamanlı seri iletişim
+* Servo motor ile otomatik kapı kontrolü
+* Erişim durumunu gösteren LED geri bildirimi
+* Modüler sistem yapısı (yazılım + donanım entegrasyonu)
 
-## Yazar
-- Selen Songül Kılıç
-- Yunus Kuşbey
+---
 
-- Tunahan Yalçın
+## ⚙️ Sistem Mimarisi
+
+1. Python, OpenCV kullanarak yüzleri algılar
+2. Tanınan yüzler için seri komut gönderilir
+3. Arduino gelen komutları işler:
+
+   * `'0'` → Kapıyı aç (servo motor)
+   * `'1'` → Kapıyı kapat
+   * `'2'` → LED yak
+   * `'3'` → LED söndür
+
+---
+
+## 🔌 Donanım Bileşenleri
+
+* Arduino Uno
+* SG90 Servo Motor
+* LED
+* USB Seri İletişim
+
+---
+
+## 📁 Proje Yapısı
+
+```id="pb4h4u"
+Face-Recognition-Door/
+│
+├── arduino/
+│   └── servo_led_control.ino
+│
+├── python/
+│   └── face_recognition_door.py
+│
+├── diagrams/
+│   ├── flowchart.png
+│   └── circuit.png
+│
+└── README.md
+```
+
+---
+
+## 📊 Sistem Akışı
+
+<img width="900" height="701" alt="image" src="https://github.com/user-attachments/assets/cee4f8db-6ca6-411d-b85c-69fe86424894" />
+
+---
+
+## 🔧 Devre Tasarımı
+
+<img width="865" height="341" alt="image" src="https://github.com/user-attachments/assets/c46ecc8d-1964-4b3c-aee7-8e82d0b0c980" />
+
+
+---
+
+## ⚠️ Proje Durumu
+
+Bu repoda sistemin temel bileşenleri yer almaktadır:
+
+* Arduino tabanlı donanım kontrolü
+* Python tabanlı yüz tanıma modülü
+
+Projenin bazı kısımları (mobil uygulama ve tam sistem entegrasyonu) veri kaybı nedeniyle bu repoda yer almamaktadır. Ancak mevcut bileşenler sistemin genel mimarisini ve çalışma mantığını göstermektedir.
+
+---
+
+## 🧠 Öğrendiklerim
+
+* Bilgisayarla görme ile gömülü sistemlerin entegrasyonu
+* Seri iletişim protokollerinin gerçek zamanlı kullanımı
+* Gerçek hayatta yüz tanıma sistemlerinin karşılaştığı zorluklar
+* Donanım ve yazılım birlikte çalışırken sistem tasarımı
+
+---
+
+## 🔄 Gelecek Geliştirmeler
+
+* Mobil uygulamanın yeniden geliştirilmesi
+* Daha iyi veri setleri ile doğruluk oranının artırılması
+* Tam sistem entegrasyonu ve gerçek zamanlı test
+
+---
+
+## 🛠 Kullanılan Teknolojiler
+
+* Python 3
+* OpenCV
+* Arduino IDE
+* Gömülü Sistemler (Servo, LED)
+
+---
+
+## 👥 Ekip
+
+* Selen Songül Kılıç
+* Yunus Kuşbey
+* Tunahan Yalçın
+
+---
+
+## 📬 İletişim
+
+Sorular veya iş birlikleri için:
+📧 [ssongul.kilic0@gmail.com](mailto:ssongul.kilic0@gmail.com)
